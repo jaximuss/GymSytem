@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Admin Dashboard</h1>
+    <p>Welcome, {{ current_user.username }}! Here you can manage users, packages, and view bookings.</p>
+    <ul>
+        <li><a href="{{ url_for('manage_packages') }}">Manage Packages</a></li>
+        <li><a href="{{ url_for('view_bookings') }}">View All Bookings</a></li>
+        <!-- Add other admin links as needed -->
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Add Package{% endblock %}
+
+{% block content %}
+<h1>Add New Package</h1>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required class="form-control">
+    
+    <label for="description">Description:</label>
+    <textarea name="description" class="form-control"></textarea>
+    
+    <label for="price">Price:</label>
+    <input type="number" step="0.01" name="price" required class="form-control">
+    
+    <label for="duration">Duration:</label>
+    <input type="text" name="duration" placeholder="e.g., 1 Month" required class="form-control">
+    
+    <button type="submit" class="btn btn-primary">Add Package</button>
+</form>
+{% endblock %}

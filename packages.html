@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Available Gym Packages{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Available Gym Packages</h1>
+    <p>Here are the packages we offer for our members.</p>
+    {% if packages %}
+        <div class="package-list">
+            {% for package in packages %}
+                <div class="package">
+                    <h2>{{ package.name }}</h2>
+                    <p><strong>Duration:</strong> {{ package.duration }}</p>
+                    <p><strong>Price:</strong> ${{ package.price }}</p>
+                    <p>{{ package.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No packages available at the moment. Please check back later.</p>
+    {% endif %}
+    <a href="{{ url_for('home') }}" class="btn btn-secondary">Back to Home</a>
+</div>
+{% endblock %}

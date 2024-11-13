@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Gym Management System{% endblock %}
+
+{% block content %}
+<h1>Welcome to the GYM Management System</h1>
+<p>This is the homepage. You can view and book gym packages here.</p>
+<a href="{{ url_for('packages') }}" class="btn btn-primary">View Packages</a>
+{% endblock %}
